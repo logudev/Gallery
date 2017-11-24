@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+	<title>Juju's World</title>
+	<script src="resources/jquery-3.2.1.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			font-family: helvetica, sans-serif;
+			margin: 0 auto;
+			max-width: 600px;
+			background: #232323;
+			background: url("https://cdn.wallpapersafari.com/0/46/T5EMWx.jpg");
+		}
+		div {
+			height: 400px;
+			background-size: cover;
+			position: relative;
+			margin: 40px 0 0 0;
+			border-radius: 12px;
+		}
+		h1 {
+			font-family: 'Londrina Shadow', cursive;
+			text-align: center;
+			font-size: 75px;
+			color: #aaaaaa;
+			margin: 60px 0 0 0;
+		}
+		h2 {
+			text-align: center;
+			color: #bbbbbb;
+			margin: 0px 0 70px 0;
+		}
+		p {
+			color: rgba(255,255,255,1);
+			background: black;
+			background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+			background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+			background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+			padding: 10px;
+			line-height: 28px;
+			text-align: justify;
+			position: absolute;
+			bottom: 0;
+			margin: 0;
+			height: 30px;
+			transition: height .5s;
+			-webkit-transition: height .5s;
+			-moz-transition: height .5s;
+		}
+		
+		small {
+			opacity: 0;
+		}
+		
+		.show-description p {
+			height: 150px;
+		}
+		
+		.show-description small {
+			opacity: 1;
+		}
+		
+		.first{
+			background-image: url("http://image.ibb.co/eKcqk6/1.jpg");
+			background-size: cover;
+			background-position: center;
+		}
+		.second{
+			background-image: url("http://image.ibb.co/hLULk6/2.jpg");
+			background-position: left center;
+			background-size: cover;
+		}
+		.third{
+			background-image: url("http://image.ibb.co/cOjWsm/3.jpg");
+			background-position: center;
+			background-size: cover;
+		}
+		.price {
+			float: right;
+		}
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 50px;
+				margin-top: 20px;
+				line-height: 40px;
+			}
+			h2 {
+				font-size: 20px;
+				margin: 20px 0 30px 0;
+			}
+			div {
+				margin: 20px 12px 0 12px;
+			}
+			p {
+				font-size: 20px;
+				line-height: 24px;
+			}
+			small {
+				font-size: 16px;
+			}
+		}
+	
+	</style>
+
+</head>
+
+<body>
+	<h1>JuJu's Gallery</h1>
+	<h2>My World of Sketches</h2>
+	<div class="first">
+		<p> <span class="price">Lonely Princess</span><br />
+			<small>Hair is such a vital beauty asset of any woman. Glimpse of such asset of a princess, who is in search of her Love and Love-life. </small></p>
+	</div>
+	
+	<div class="second">
+		<p><span class="price">You & Me</span><br />
+			<small>She can forget her world of sorrows in his single smile. He can foresee the happy days to come, in her lovely eyes. They say, Love is beautiful!!</small></p>
+	</div>
+	
+	<div class="third">
+		<p> <span class="price">Sister Power</span><br />
+			<small>Who needs a better friend and guardian, when you have the sister power by your side. Sharing the same birth-place to sharing the best moments of Life. My Power</small></p>
+	</div>
+	
+	<script>
+        $('div').on('click', function() {
+            $(this).toggleClass('show-description');
+        });
+	</script>
+
+</body>
